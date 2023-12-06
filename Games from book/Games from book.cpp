@@ -1,35 +1,36 @@
-// Дорогой калькулятор
-// Демонстрирует работы
+// Программа Game Stats 2.0
+// Демонстрирует арифметические операции с переменными
 #include <iostream>
-using namespace std;
 int main()
 {
-	int score;
-	double distance;
-	char playAgain;
-	bool shieldsUp;
-	short lives, aliensKilled;
-	score = 0;
-	distance = 1200.50;
-	playAgain = 'y';
-	shieldsUp = true;
+	unsigned int score = 6000;
+	std::cout << "score: " << score <<std::endl;
+	// изменение значения переменной
+	score = score + 100;
+	std::cout << "score: " << score << std::endl;
+	// комбинированный оператор присваивания
+	score += 1000;
+	std::cout << "score: " << score << std::endl;
+	// операторы инкремента
+	int lives = 3;
+	++lives;
+	std::cout << "lives: " << lives << std::endl;
 	lives = 3;
-	aliensKilled = 10;
-	double engineTemp = 6572.41;
-	cout << "\nscore: " << score << endl;
-	cout << "distance: " << distance << endl;
-	cout << "playAgain: " << playAgain << endl;
-	cout << "lives: " << lives << endl;
-	cout << "aliensKilled: " << aliensKilled << endl;
-	cout << "engineTemp: " << engineTemp << endl;
-	int fuel;
-	cout << "\nHow much fuel? ";
-	cin >> fuel;
-	cout << "fuel: " << fuel << endl;
-	typedef unsigned short int ushort;
-	ushort bonus = 10;
-	cout << "\nbonus: " << bonus << endl;
-	return  0;
+	lives++;
+	std::cout << "lives: " << lives << std::endl;
+	lives = 3;
+	int bonus = ++lives * 10;
+	std::cout << "lives.bonus = " << lives << ", " << bonus << std::endl;
+	lives = 3;
+	bonus = lives++ * 10;
+	std::cout << "lives.bonus = " << lives << ", " << bonus << std::endl;
+	// целочисленное переполнение
+	score = 67537457;
+	std::cout << "\nscore: " << score << std::endl;
+	++score;
+	std::cout << "score: " << score << std::endl;
+	score = score - score;
+	std::cout << "score: " << score << std::endl;
+	return 0;
+
 }
-
-
