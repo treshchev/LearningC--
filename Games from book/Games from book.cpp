@@ -25,11 +25,9 @@ int main()
 	bonus = lives++ * 10;
 	std::cout << "lives.bonus = " << lives << ", " << bonus << std::endl;
 	// integer overflow
-	score = 67537457;
+	score = 4294967295;
 	std::cout << "\nscore: " << score << std::endl;
 	++score;
-	std::cout << "score: " << score << std::endl;
-	score = score - score;
 	std::cout << "score: " << score << std::endl;
 	return 0;
 
