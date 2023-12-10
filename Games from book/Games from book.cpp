@@ -1,17 +1,17 @@
-// Программа Game Stats 2.0
-// Демонстрирует арифметические операции с переменными
+// Game Stats 2.0 program
+// Demonstrates arithmetic operations with variables
 #include <iostream>
 int main()
 {
 	unsigned int score = 6000;
 	std::cout << "score: " << score <<std::endl;
-	// изменение значения переменной
+	// changing the value of a variable
 	score = score + 100;
 	std::cout << "score: " << score << std::endl;
-	// комбинированный оператор присваивания
+	// combined assignment operator
 	score += 1000;
 	std::cout << "score: " << score << std::endl;
-	// операторы инкремента
+	// increment operators
 	int lives = 3;
 	++lives;
 	std::cout << "lives: " << lives << std::endl;
@@ -24,7 +24,7 @@ int main()
 	lives = 3;
 	bonus = lives++ * 10;
 	std::cout << "lives.bonus = " << lives << ", " << bonus << std::endl;
-	// целочисленное переполнение
+	// integer overflow
 	score = 67537457;
 	std::cout << "\nscore: " << score << std::endl;
 	++score;
