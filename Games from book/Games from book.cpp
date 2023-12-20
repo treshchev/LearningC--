@@ -1,34 +1,16 @@
-// Game Stats 2.0 program
-// Demonstrates arithmetic operations with variables
+//Программа Game Stats 3.0
+//Демонстрирует работу с константами
 #include <iostream>
 int main()
 {
-	unsigned int score = 6000;
-	std::cout << "score: " << score <<std::endl;
-	// changing the value of a variable
-	score = score + 100;
+	const int ALIEN_POINTS = 150;
+	int aliensKilled = 10;
+	int score = aliensKilled * ALIEN_POINTS;
 	std::cout << "score: " << score << std::endl;
-	// combined assignment operator
-	score += 1000;
-	std::cout << "score: " << score << std::endl;
-	// increment operators
-	int lives = 3;
-	++lives;
-	std::cout << "lives: " << lives << std::endl;
-	lives = 3;
-	lives++;
-	std::cout << "lives: " << lives << std::endl;
-	lives = 3;
-	int bonus = ++lives * 10;
-	std::cout << "lives.bonus = " << lives << ", " << bonus << std::endl;
-	lives = 3;
-	bonus = lives++ * 10;
-	std::cout << "lives.bonus = " << lives << ", " << bonus << std::endl;
-	// integer overflow
-	score = 4294967295;
-	std::cout << "\nscore: " << score << std::endl;
-	++score;
-	std::cout << "score: " << score << std::endl;
+	enum difficulty { NOVICE, EASY, NORMAL, HARD, UNBEATABLE };
+	difficulty myDifficulty = EASY;
+	enum shipCost { FIGHTER_COST = 26, BOMBER_COST, CRUISER_COST = 100 };
+	shipCost myShipCost = BOMBER_COST;
+	std::cout << "\nTo upgrade my ship to a Cruiser will cost " << (CRUISER_COST - myShipCost) << " Resourse Points. \n " << std::endl;
 	return 0;
-
 }
