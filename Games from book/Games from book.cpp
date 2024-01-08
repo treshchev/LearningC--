@@ -1,31 +1,18 @@
-//Программа Score Rater 
-// Прогрмма демонстриурет работу с инструкцией if
+// Программа Score Rater 2.0
+// Демонстрирует работу с условием else
 #include <iostream>
 int main() {
-	if (true)
+	int score;
+	std::cout << "Enter your score: ";
+	std::cin >> score;
+	if (score >= 1000)
 	{
-		std::cout << "This is always displayed.\n\n";
+		std::cout << "You scored 1000 or more. Impressive!\n";
 	}
-	if (false)
+	else
 	{
-		std::cout << "This is never displayed.\n\n";
-	}
-	int score = 1000;
-	if (score)
-	{
-		std::cout << "At least you didnt score zero.\n\n";
-	}
-	if (score >= 350)
-	{
-		std::cout << "You scored 350 or more. Decent.\n\n";
-	}
-	if (score >= 500)
-	{
-		std::cout << "You scored 500 or more. Nice.\n\n";
-		if (score >= 1000)
-		{
-			std::cout << "You scored 1000 or more. Impressive!\n";
-		}
+		std::cout << "You scored less than 1000.\n";
 	}
 	return 0;
+
 }
