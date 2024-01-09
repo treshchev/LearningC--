@@ -1,11 +1,16 @@
 // Программа Score Rater 3.0
+// Score Rater 3.0 program
+
 // Демонстрирует работу с последовательностью if else - if else
+// Demonstrates working with the sequence if else - if else
 #include <iostream>
 int main() 
 {
 	int score;
+
 	std::cout << "Enter your score: ";
 	std::cin >> score;
+
 	if (score >= 1000)
 	{
 		std::cout << "You scored 1000 or more";
@@ -22,5 +27,6 @@ int main()
 	{
 		std::cout << "You scored less than 250. Nothing to brag about.\n";
 	}
+
 	return 0;
 }
