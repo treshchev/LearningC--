@@ -10,8 +10,12 @@ int main()
 	int choice;
 	std::cout << "Choice: ";
 	std::cin >> choice;
+
 	switch (choice)
 	{
+		// в команде case можно написать любое число, 
+		// и в зависимости от написанного числа, будет выводится тот или иной текст
+		// I write these commands for myself to better understand the code and various commands
 	case 1:
 		std::cout << "You picked Easy.\n";
 		break;
@@ -21,6 +25,9 @@ int main()
 	case 3:
 		std::cout << "You picked Hard\n";
 		break;
+		// команда default используется, если мы введём любое другое число (кроме 1, 2, 3) то у нас
+		// на экран выводится именно этот текст, который мы написали в default 
+		// I write these commands for myself to better understand the code and various commands
 	default:
 		std::cout << "You made an illegal choice.\n";
 
