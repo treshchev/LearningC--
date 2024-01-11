@@ -1,32 +1,29 @@
-// Программа Score Rater 3.0
-// Score Rater 3.0 program
-
-// Демонстрирует работу с последовательностью if else - if else
-// Demonstrates working with the sequence if else - if else
+// Программа Menu Chooser
+// Демонстрирцет работу с интсрукццией switch
 #include <iostream>
-int main() 
+int main()
 {
-	int score;
+	std::cout << "Difficulty Levels\n\n";
+	std::cout << "1 - Easy\n";
+	std::cout << "2 - Normal\n";
+	std::cout << "3 - Hard\n";
+	int choice;
+	std::cout << "Choice: ";
+	std::cin >> choice;
+	switch (choice)
+	{
+	case 1:
+		std::cout << "You picked Easy.\n";
+		break;
+	case 2:
+		std::cout << "You picked Normal\n";
+		break;
+	case 3:
+		std::cout << "You picked Hard\n";
+		break;
+	default:
+		std::cout << "You made an illegal choice.\n";
 
-	std::cout << "Enter your score: ";
-	std::cin >> score;
-
-	if (score >= 1000)
-	{
-		std::cout << "You scored 1000 or more";
 	}
-	else if (score >= 500)
-	{
-		std::cout << "You scored 500 or more. Nice.\n";
-	}
-	else if (score >= 250)
-	{
-		std::cout << "You scored 250 or more. Decent.\n";
-	}
-	else
-	{
-		std::cout << "You scored less than 250. Nothing to brag about.\n";
-	}
-
 	return 0;
 }
