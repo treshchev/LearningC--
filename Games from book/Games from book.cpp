@@ -1,16 +1,18 @@
-// Программа Play Again
-// Демонстрирует работу с циклом while
+// Программа Play Again 2.0
+// Демонстрирует работу с циклом do
 #include <iostream>
 int main()
 {
-	char again = 'y';
-	while (again == 'y')
+	char round;
+	do
 	{
-		std::cout << "\n**Played an exiting game**";
-		std::cout << "\nDo you want to play again? (y/n): ";
-		std::cin >> again;
+		std::cout << "\n**Played an exting game**";
+		std::cout << "\nDo you want to play again? (y/n)";
+		std::cin >> round;
 
-	}
-	std::cout << "\nOkay. bye.";
-	return 0;
+	} while (round == 'y');
+	
+		std::cout << "\nOk bye";
+		return 0;
+	
 }
