@@ -1,18 +1,25 @@
-// Программа Play Again 2.0
-// Демонстрирует работу с циклом do
+// Программа Finicky Counter
+// Демонстрирует работу с интрукциями break и  continue
 #include <iostream>
 int main()
 {
-	char round;
-	do
+	int count = 0;
+	while (true)  // задаю значение true и теперь цикл не может быть false
 	{
-		std::cout << "\n**Played an exting game**";
-		std::cout << "\nDo you want to play again? (y/n)";
-		std::cin >> round;
+		count++;
+		// заканчиваес цикл, если значение count превышает 10
 
-	} while (round == 'y');
-	
-		std::cout << "\nOk bye";
-		return 0;
-	
+		if (count > 5) // тут я задаю параментры бесконечного цикла, так как true это бесконечный цикл
+		{
+			break;
+		}
+
+		// пропускаем число 5
+		if (count == 1)
+		{
+			continue;
+		}
+		std::cout << count << std::endl;
+	}
+	return 0;
 }
