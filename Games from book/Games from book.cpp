@@ -7,7 +7,7 @@ int main()
     std::string username;
     std::string password;
 
-    bool succes;
+    bool success;
     std::cout << "\nGame Designer's Network\n";
         do
         {
@@ -19,34 +19,34 @@ int main()
             if (username == "qwe" && password == "qwe123")
             {
                 std::cout << "\nHello Sir.";
-                succes = true;
+                success = true;
             }
 
             else if (username == "qaz" && password == "qaz123")
             {
                 std::cout << "\nWhat's up bro!";
-                succes = true;
+                success = true;
             }
 
             else if (username == "wsx" && password == "wsx123")
             {
                 std::cout << "\nHow is it going?";
-                succes = true;
+                success = true;
             }
 
             else if (username == "guest" || password == "guest")
             {
                 std::cout << "\nWelcome guest";
-                succes = true;
+                success = true;
             }
 
             else
             {
                 std::cout << "\nYour login or password failed.";
-                succes = false;
+                success = false;
             }
 
-        } while (!succes);
+        } while (!success);
 
           return 0;
 }
