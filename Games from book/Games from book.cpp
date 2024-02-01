@@ -7,9 +7,9 @@ int main()
     std::string username;
     std::string password;
 
-    bool success;
+    bool success = false;
     std::cout << "\nGame Designer's Network\n";
-        do
+    while (!success)  // если false то цикл продолжается, если true то закончиться
         {
             std::cout << "\nUsername: ";
             std::cin >> username;
@@ -46,7 +46,7 @@ int main()
                 success = false;
             }
 
-        } while (!success);
+        } 
 
           return 0;
 }
