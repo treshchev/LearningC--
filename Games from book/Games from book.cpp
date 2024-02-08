@@ -9,32 +9,32 @@ int main()
 
     bool success = false;
     std::cout << "\nGame Designer's Network\n";
-    while (!success)  // если false то цикл продолжается, если true то закончиться
+    while (success == false)  // если false то цикл продолжается, если true то закончиться
         {
             std::cout << "\nUsername: ";
             std::cin >> username;
             std::cout << "Password: ";
             std::cin >> password;
 
-            if (username == "qwe" && password == "qwe123")
+            if ( (username == "qwe") && (password == "qwe123") )
             {
                 std::cout << "\nHello Sir.";
                 success = true;
             }
 
-            else if (username == "qaz" && password == "qaz123")
+            else if ( (username == "qaz") && (password == "qaz123") )
             {
                 std::cout << "\nWhat's up bro!";
                 success = true;
             }
 
-            else if (username == "wsx" && password == "wsx123")
+            else if ( (username == "wsx") && (password == "wsx123") )
             {
                 std::cout << "\nHow is it going?";
                 success = true;
             }
 
-            else if (username == "guest" || password == "guest")
+            else if ( (username == "guest") || (password == "guest") )
             {
                 std::cout << "\nWelcome guest";
                 success = true;
