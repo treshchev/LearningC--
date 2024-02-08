@@ -1,52 +1,15 @@
-// Программа Designer Network
-// Демонстрирует работу с логическими операторами
+// Программа  Die Roller
+// Демонстрирует генерирование случайных чисел
 #include <iostream>
-#include <string>
+#include <cstdlib>
+#include <ctime>
+
 int main()
 {
-    std::string username;
-    std::string password;
-
-    bool success = false;
-    std::cout << "\nGame Designer's Network\n";
-    while (success == false)  // если false то цикл продолжается, если true то закончиться
-        {
-            std::cout << "\nUsername: ";
-            std::cin >> username;
-            std::cout << "Password: ";
-            std::cin >> password;
-
-            if ( (username == "qwe") && (password == "qwe123") )
-            {
-                std::cout << "\nHello Sir.";
-                success = true;
-            }
-
-            else if ( (username == "qaz") && (password == "qaz123") )
-            {
-                std::cout << "\nWhat's up bro!";
-                success = true;
-            }
-
-            else if ( (username == "wsx") && (password == "wsx123") )
-            {
-                std::cout << "\nHow is it going?";
-                success = true;
-            }
-
-            else if ( (username == "guest") || (password == "guest") )
-            {
-                std::cout << "\nWelcome guest";
-                success = true;
-            }
-
-            else
-            {
-                std::cout << "\nYour login or password failed.";
-                success = false;
-            }
-
-        } 
-
-          return 0;
+	srand(static_cast <unsigned int> (time(0)));
+	// запускаем генератор случайных чисел
+	int  randomNumber = rand(); // генерируем случайное число
+	int die = (randomNumber % 6) + 1; // получаем число можду 1 и 6
+		std::cout << "You rolled a " << die << std::endl;
+	return 0;
 }
