@@ -11,5 +11,7 @@ int main()
 	int  randomNumber = rand(); // генерируем случайное число
 	int die = (randomNumber % 6) + 1; // получаем число можду 1 и 6
 		std::cout << "You rolled a " << die << std::endl;
+
+		std::cout << "A number: " << RAND_MAX << std::endl;  // это просто проверка, диапазона чисел, где мы генерируем случайное число
 	return 0;
 }
