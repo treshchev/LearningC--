@@ -1,17 +1,32 @@
-// Программа  Die Roller
-// Демонстрирует генерирование случайных чисел
+// Игра Guess My Number
+// Классическая игра в угадывание чисел
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
 int main()
 {
-	srand(static_cast <unsigned int> (time(0)));
-	// запускаем генератор случайных чисел
-	int  randomNumber = rand(); // генерируем случайное число, задаю значение от 0 до 32 767
-	int die = (randomNumber % 6) + 1; // получаем число можду 1 и 6, тут просто если любое положительное число подалить на 6 и прибавить + 1 то будет диапазон от 0 до 6
-		std::cout << "You rolled a " << die << std::endl;
-
-		std::cout << "A max number: " << RAND_MAX << std::endl;  // это просто проверка, диапазона чисел, где мы генерируем случайное число
+	srand(static_cast<unsigned int>(time(0))); // запускаем генератор случайных чисел
+	int secretNum = rand() % 100 + 1; // случайное число в диапазоне от 1 до 100
+	int tries = 0;
+	int guess = 0;
+	std::cout << "\Guess My Number!\n\n";
+	while (guess != secretNum)
+	{
+		std::cout << "Enter a guess: ";
+		std::cin >> guess;
+		++tries;
+		if (guess > secretNum)
+		{
+			std::cout << "Too Hight!\n\n";
+		}
+		else if (guess < secretNum)
+		{
+			std::cout << "Too Low!\n\n";
+		}
+		else
+		{
+			std::cout << "\nThat's it! You got it in " << tries << " guesses!\n";
+		}
+	}
 	return 0;
 }
