@@ -1,32 +1,35 @@
-// Игра Guess My Number
-// Классическая игра в угадывание чисел
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-int main()
+
+enum Difficulty 
 {
-	srand(static_cast<unsigned int>(time(0))); // запускаем генератор случайных чисел
-	int secretNum = rand() % 100 + 1; // случайное число в диапазоне от 1 до 100
-	int tries = 0;
-	int guess = 0;
-	std::cout << "\Guess My Number!\n\n";
-	while (guess != secretNum)
-	{
-		std::cout << "Enter a guess: ";
-		std::cin >> guess;
-		++tries;
-		if (guess > secretNum)
-		{
-			std::cout << "Too Hight!\n\n";
-		}
-		else if (guess < secretNum)
-		{
-			std::cout << "Too Low!\n\n";
-		}
-		else
-		{
-			std::cout << "\nThat's it! You got it in " << tries << " guesses!\n";
-		}
-	}
-	return 0;
+    EASY = 1,
+    NORMAL = 2,
+    HARD = 3
+};
+
+int main() {
+    std::cout << "Difficulty Levels\n";
+    std::cout << "1 - Easy\n";
+    std::cout << "2 - Normal\n";
+    std::cout << "3 - Hard\n";
+
+    int choice;
+    std::cout << "Choice: ";
+    std::cin >> choice;
+
+    switch (choice) {
+    case EASY:
+        std::cout << "You picked Easy.\n";
+        break;
+    case NORMAL:
+        std::cout << "You picked Normal\n";
+        break;
+    case HARD:
+        std::cout << "You picked Hard\n";
+        break;
+    default:
+        std::cout << "Invalid choice\n";
+    }
+
+    return 0;
 }
