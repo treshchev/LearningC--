@@ -8,6 +8,7 @@ enum Difficulty
 };
 
 int main() {
+    
     std::cout << "Difficulty Levels\n";
     std::cout << "1 - Easy\n";
     std::cout << "2 - Normal\n";
