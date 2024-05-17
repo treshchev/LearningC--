@@ -1,36 +1,41 @@
+// Программа Counter
+// Демонстрирует работу с циклами for
 #include <iostream>
-
-enum Difficulty 
+int main()
 {
-    EASY = 1,
-    NORMAL = 2,
-    HARD = 3
-};
+	std::cout << "Counting forward:\n";
+	for (int i = 0; i < 10; ++i)
+	{
+		std::cout << i << " ";
+	}
+	std::cout << "\n\nCounting backward:\n";
+	for (int i = 9; i >= 0; i--)
+	{
+		std::cout << i << " ";
+	}
+	std::cout << "\n\nCounting by fives:\n";
+	for (int i = 0; i <= 50; i += 5)
+	{
+		std::cout << i << " ";
+	}
+	std::cout << "\n\nCounting with null statements:\n";
+	int count = 0;
+	for (; count < 10;)
+	{
+		std::cout << count << " ";
+		++count;
+	}
+	std::cout << "\n\nCounting with nested for loops:\n";
+	const int ROWS = 5;
+	const int COLUMS = 3;
+	for (int i = 0; i < ROWS; ++i)
+	{
+		for (int k = 0; k < COLUMS; ++k)
+		{
+			std::cout << i << "," << k << " ";
+		}
+		std::cout << std::endl;
+	}
+	return 0;
 
-int main() {
-    
-    std::cout << "Difficulty Levels\n";
-    std::cout << "1 - Easy\n";
-    std::cout << "2 - Normal\n";
-    std::cout << "3 - Hard\n";
-
-    int choice;
-    std::cout << "Choice: ";
-    std::cin >> choice;
-
-    switch (choice) {
-    case EASY:
-        std::cout << "You picked Easy.\n";
-        break;
-    case NORMAL:
-        std::cout << "You picked Normal\n";
-        break;
-    case HARD:
-        std::cout << "You picked Hard\n";
-        break;
-    default:
-        std::cout << "Invalid choice\n";
-    }
-
-    return 0;
 }
