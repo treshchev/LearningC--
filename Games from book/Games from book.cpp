@@ -1,40 +1,40 @@
-// Программа Counter
-// Демонстрирует работу с циклами for
+// Программа String Tetser
+// Демонтстрирует работу со строковыми объектами
 #include <iostream>
+#include <string>
+
 int main()
 {
-	std::cout << "Counting forward:\n";
-	for (int i = 0; i < 10; ++i)
+	std::string word1 = "Game";
+	std::string word2("Over");
+	std::string word3(3, '!');
+	std::string phrase = word1 + " " + word2 + word3;
+	std::cout << "The pharse is: " << phrase << "\n\n";
+	std::cout << "The phrase has " << phrase.size() << " characters in it. \n\n";
+	std::cout << "The chartacter at position 0 is: " << phrase[1] << "\n\n";
+	std::cout << "Changing the character at position.0\n";
+	phrase[0] = 'B';
+
+	std::cout << "The phrase is now: " << phrase << "\n\n";
+	for (unsigned int i = 0; i < phrase.size(); ++i)
 	{
-		std::cout << i << " ";
+		std::cout << "Character at position " << i << " is: " << phrase[i] << std::endl;
 	}
-	std::cout << "\n\nCounting backward:\n";
-	for (int i = 9; i >= 0; i--)
+	std::cout << "\nThe sequence 'Over' begins at location ";
+	std::cout << phrase.find("Over") << std::endl;
+	if (phrase.find("eggplant") == std::string::npos)
 	{
-		std::cout << i << " ";
+		std::cout << "'eggplant' is not in the phrase.\n\n";
 	}
-	std::cout << "\n\nCounting by fives:\n";
-	for (int i = 0; i <= 50; i += 5)
+	phrase.erase(4, 5);
+	std::cout << "The pharse is now: " << phrase << std::endl;
+	phrase.erase(4);
+	std::cout << "The phrase is now: " << phrase << std::endl;
+	phrase.erase();
+	std::cout << "The phrase is now: " << phrase << std::endl;
+	if (phrase.empty())
 	{
-		std::cout << i << " ";
-	}
-	std::cout << "\n\nCounting with null statements:\n";
-	int count = 0;
-	for (; count < 10;)
-	{
-		std::cout << count << " ";
-		++count;
-	}
-	std::cout << "\n\nCounting with nested for loops:\n";
-	const int ROWS = 5;
-	const int COLUMS = 3;
-	for (int i = 0; i < ROWS; ++i)
-	{
-		for (int k = 0; k < COLUMS; ++k)
-		{
-			std::cout << i << "," << k << " ";
-		}
-		std::cout << std::endl;
+		std::cout << "\nThe phrase is no more.\n";
 	}
 	return 0;
 
