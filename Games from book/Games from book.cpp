@@ -23,7 +23,10 @@ int main()
 	}
 	std::cout << "\nThe sequence 'Over' begins at location ";
 	std::cout << phrase.find("Over") << std::endl;
-	if (phrase.find("eggplant") == std::string::npos)
+
+	size_t location = phrase.find("eggplant");
+
+	if (location == std::string::npos)
 	{
 		std::cout << "'eggplant' is not in the phrase.\n\n";
 	}
