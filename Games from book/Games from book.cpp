@@ -1,45 +1,54 @@
-﻿// Программа String Tetser
-// Демонтстрирует работу со строковыми объектами
+﻿// Programme Hero's Inventory
+// Describes some actions with massive
+
 #include <iostream>
 #include <string>
 
 int main()
 {
-	std::string word1 = "Game";
-	std::string word2("Over");  // assignment using ("")
-	std::string word3 (3, '!');
+	const int MAX_ITEMS = 5;
+	std::string inventory[MAX_ITEMS];
+	
+	// std::string inventory[MAX_ITEMS] = { "sword", "armor", "shield" };
 
-	std::string phrase = word1 + " " + word2 + word3;
-	std::cout << "The pharse is: " << phrase << "\n\n";
-	std::cout << "The phrase has " << phrase.size() << " characters in it. \n\n";
-	std::cout << "The chartacter at position 0 is: " << phrase[0] << "\n\n";
-	std::cout << "Changing the character at position.0\n";
-	phrase[0] = 'B';
+	int NumItems = 0;
+	inventory[NumItems++] = "sword";
+	inventory[NumItems++] = "armor";
+	inventory[NumItems++] = "shield";
 
-	std::cout << "The phrase is now: " << phrase << "\n\n";
-	for (unsigned int i = 0; i < phrase.size(); ++i)
+	std::cout << "Your items:\n";
+
+	for (int i = 0; i < NumItems; i++)
 	{
-		std::cout << "Character at position " << i << " is: " << phrase[i] << std::endl;
+		std::cout << inventory[i] << std::endl;
 	}
-	std::cout << "\nThe sequence 'Over' begins at location ";
-	std::cout << phrase.find("Over") << std::endl;
 
-	size_t location = phrase.find("eggplant");
+	std::cout << "\nYou trade your sword for a battle axe.\n";
+	inventory[0] = "battle axe";
+	std::cout << "Your items:\n";
 
-	if (location == std::string::npos)
+	for (int i = 0; i < NumItems; i++)
 	{
-		std::cout << "'eggplant' is not in the phrase.\n\n";
+		std::cout << inventory[i] << std::endl;
 	}
-	phrase.erase(4, 5);
-	std::cout << "The pharse is now: " << phrase << std::endl;
-	phrase.erase(4);
-	std::cout << "The phrase is now: " << phrase << std::endl;
-	phrase.erase();
-	std::cout << "The phrase is now: " << phrase << std::endl;
-	if (phrase.empty())
+
+	std::cout << "\nThe item name " << inventory[1] << " has ";
+	std::cout << inventory[1].size() << " letters in it.\n";
+	std::cout << "\nYou found a healing potion.\n";
+
+	if (NumItems <= MAX_ITEMS)
 	{
-		std::cout << "\nThe phrase is no more.\n";
+		inventory[NumItems++] = "healing potion";
+	}
+	else
+	{
+		std::cout << "You have too much items and cant carry another\n\n";
+	}
+
+	std::cout << "Your items:\n";
+	for (int i = 0; i < NumItems; i++)
+	{
+		std::cout << inventory[i] << std::endl;
 	}
 	return 0;
-
 }
