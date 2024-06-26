@@ -6,7 +6,7 @@
 
 int main()
 {
-	const int MAX_ITEMS = 5;
+	const int MAX_ITEMS = 10;
 	std::string inventory[MAX_ITEMS];
 	
 	// std::string inventory[MAX_ITEMS] = { "sword", "armor", "shield" };
@@ -50,5 +50,22 @@ int main()
 	{
 		std::cout << inventory[i] << std::endl;
 	}
+
+	char Phrase[81] = "GameOver!!!";
+
+	std::cout << "\nThe phrase has " << strlen (Phrase) << " letters in it" << std::endl;
+
+	std::string FirstWord = "Vladislav";
+	char SecondWord[] = "Treshchev";
+	std::string FullPhrase = FirstWord + SecondWord;
+	if (FirstWord != SecondWord)
+	{
+		std::cout << "FirstWord and SecondWord are not equal.\n";
+	}
+	if (FullPhrase.find(SecondWord) != std::string::npos)
+	{
+		std::cout << "SecondWord is contained in FullPhrase\n";
+	}
+
 	return 0;
 }
